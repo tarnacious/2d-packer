@@ -14,6 +14,6 @@ The second draws the boxes.
 
     $ cat rectangles.txt | python2 pack.py | python2 draw.py
 
-![screenshot](tarnacious.github.com/2d-packer/screenshot.png)
+![screenshot](https://github.com/tarnacious/2d-packer/blob/master/screenshot.png)
 
 The problem we want to solve is a little more complex but this is a nice start.
