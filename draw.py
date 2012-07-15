@@ -21,17 +21,20 @@ class MyFrame(wx.Frame):
 
     def on_paint(self, event):
         scale = 5
+        offset_x = 250
+        offset_y = 50
         # establish the painting surface
         dc = wx.PaintDC(self.panel)
         dc.SetPen(wx.Pen('blue', 4))
-        rect = wx.Rect(0, 0, 100 * scale, 100 * scale)
-        dc.DrawRoundedRectangleRect(rect, 2)
+        dc.DrawRectangle(offset_x, offset_y, 100 * scale, 100 * scale)
         dc.SetPen(wx.Pen('red', 1))
-        dc.SetBrush(wx.Brush('#c56c00'))
+        dc.SetBrush(wx.Brush('green'))
         # draw a red rounded-rectangle
         for box in self.boxes:
-            rect = wx.Rect(box[0] * scale, box[1] * scale, box[2] * scale, box[3] * scale)
-            dc.DrawRoundedRectangleRect(rect, 2)
+            rect = dc.DrawRectangle(offset_x + box[0] * scale,
+                           offset_y + box[1] * scale,
+                           box[2] * scale,
+                           box[3] * scale)
 
 
 # test it ...

@@ -9,7 +9,7 @@ for line in lines:
     rectangles.append((int(points[0]), int(points[1])))
 
 packer = CygonRectanglePacker(100, 100)
-rectangles = sorted(rectangles, key=lambda r: ( r[0] * r[1]))
+rectangles = sorted(rectangles, key=lambda r: -( r[0] * r[1]))
 
 placements = []
 
